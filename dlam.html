@@ -1,19 +1,32 @@
 <html>
 <head>
-<title>¶ßÀ²AÃÎ</title>
+<meta charset="utf-8">
+<title>å“†å•¦Aæ¢¦</title>
 <style>
-.dlam{width: 1000px;height: 1000px;margin: auto;}
+.dlam{width:675px;height: 1000px;margin: auto;}
 .head{width: 675px;height: 675px;border-radius: 50%;background:#4c7ebd;position: relative;}
 .eye{width:160px;height: 200px;border-radius:50%;border:2px solid #000;position: absolute;top: 120px;background:#fff;z-index: 10}
 .l-eye{left: 173px;}
 .r-eye{right: 173px;}
 .black-eye{width: 25px;height: 45px;border-radius: 50%;background:#000;position: absolute;top: 110px;z-index: 10}
-.l-eye .black-eye{left: 80px}
-.r-eye .black-eye{right: 80px}
+.l-eye .black-eye{left: 80px;animation:2s leye linear;animation-iteration-count:infinite;}
+.r-eye .black-eye{right: 80px;animation:2s reye linear;animation-iteration-count:infinite;}
+@keyframes leye{
+	20%{left:50px;}
+	50%{left:80px;}
+	75%{left:110px;}
+	100%{left:80px;}
+}
+@keyframes reye{
+	20%{right:110px;}
+	50%{right:80px;}
+	75%{right:50px;}
+	100%{right:80px;}
+}
 .face{width: 550px;height: 470px;border-radius: 50%;position: absolute;left: 60px;bottom: 0;background: #fff;border:2px solid #000;}
 .nouse{width: 70px;height: 70px;border-radius: 50%;background:#eb1e25;position: absolute;left: 50%;margin-left:-35px;z-index: 11;top: 75px;border:1px solid #000;}
 .white-nouse{width: 28px;height: 31px;background:#fff;border-radius: 50%;position: absolute;top: 10px;right: 7px;border:1px solid #84080c;}
-.mouse{width: 355px;height: 195px;position: absolute;top: 50%;left: 50%;margin-left:-177.5px;margin-top:-88px;border-bottom: 5px solid #000;border-radius:10%;}
+.mouse{width: 355px;height: 195px;position: absolute;top: 50%;left: 50%;margin-left:-177.5px;margin-top:-88px;border-bottom: 5px solid #000;border-radius:50%;}
 .mouse span{display: block;width:5px;height: 195px;background:#000;margin:auto;}
 .hx{width:167px;height:120px;position: absolute;margin-top:160px;}
 .l-hx{left: 60px;}
@@ -24,7 +37,7 @@
 .r-hx span:nth-child(1){width:140px;height: 5px;background:#000;display: block;transform:rotate(-9deg);margin-left:20px;}
 .r-hx span:nth-child(2){width:160px;height: 5px;background:#000;display: block;margin-top:35px;margin-left:20px;}
 .r-hx span:nth-child(3){width:140px;height: 5px;background:#000;display: block;margin-top:35px;transform:rotate(9deg);margin-left:20px;}
-.body{width:675px;position: relative;}
+.body{width:675px;height: 300px;position: relative;}
 .neak{width: 380px;height:40px;background:#eb1e25;position: absolute;left: 50%;margin-left:-190px;top: -56px;z-index: 10;}
 .neak span:nth-child(1){width: 40px;height: 40px;border-radius: 50%;background:#eb1e25;display: block;float: left;margin-left:-20px; }
 .neak span:nth-child(2){width: 40px;height: 40px;border-radius: 50%;background:#eb1e25;display: block;float: right;margin-right:-20px;}
@@ -38,6 +51,17 @@
 .ld span:nth-child(4){width: 3px;height: 12px;background:#000;left: 50%;margin-left:-1.5px;bottom: 0;}
 .dlam-kd{width: 200px;height:230px;border-radius:50%;background:#fff;position: absolute;left: 50%;margin-left: -100px;top: 0;border:2px solid #000;}
 .dlam-kd span{display: block;width: 200px;height:200px;border-bottom:2px solid #000;position: absolute;top:-106px;background:#fff;}
+.l-hand{width: 193px;height: 162px;position:absolute;left: -43px;top: -30px;}
+.l-hand span:nth-child(1){width: 122px;height:60px;background:#4c7ebd;display: block;transform:rotate(15deg);position: absolute;right: -5.8px;top: 1.5px;border-top: 3px solid #000;border-bottom: 3px solid #000;}
+.l-hand span:nth-child(2){width: 115px;height: 115px;border-radius: 50%;border: 3px solid #000;display: block;position: absolute;top: -53px;left: -30px;background: #fff;}
+.r-hand{width: 193px;height: 162px;position:absolute;right: -43px;top: -96px;transform: rotate(180deg);}
+.r-hand span:nth-child(1){width: 122px;height:60px;background:#4c7ebd;display: block;transform:rotate(15deg);position: absolute;right: -5.8px;top: 1.5px;border-top: 3px solid #000;border-bottom: 3px solid #000;}
+.r-hand span:nth-child(2){width: 115px;height: 115px;border-radius: 50%;border: 3px solid #000;display: block;position: absolute;top: -53px;left: -30px;background: #fff;}
+.yf{width: 384px;height: 275px;position: absolute;border: 3px solid #000;border-top: 0;margin-top: 40px;box-sizing: border-box;}
+.footer{position: absolute;width: 384px;left: 50%;margin-left: -192px;bottom: 10px;}
+.footer span{background: #fff;}
+.footer span:nth-child(1){display: block;position: absolute;width: 245px;height:65px;border-radius:50%;border:3px solid #000;left:-60px;}
+.footer span:nth-child(3){display: block;position: absolute;width: 245px;height:65px;border-radius:50%;border:3px solid #000;right:-60px;}
 </style>
 </head>
 <body>
@@ -67,11 +91,20 @@
 	</div>
 	</div>
 	<div class="body">
+	<div class="l-hand">
+	<span></span>
+	<span></span>
+	</div>
+	<div class="r-hand">
+	<span></span>
+	<span></span>
+	</div>
 	<div class="neak">
 	<span></span>
 	<span></span>
 	</div>
 	<div class="tummy">
+	<div class="yf"></div>
 	<div class="kd">
 	<div class="ld">
 	<span></span>
@@ -84,6 +117,11 @@
 	</div>
 	</div>
 	</div>
+	</div>
+	<div class="footer">
+	<span></span>
+	<span></span>
+	<span></span>
 	</div>
 	</div>
 </body>

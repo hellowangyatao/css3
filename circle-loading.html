@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	body{height: 100%}
+	.middle{width: 1px;height: 1px;background:#a1efef;display: block;border-radius: 50%; animation: middle 1.5s;animation-iteration-count: infinite;position:absolute;left: 50%;top: 50%;}
+	.outside{width: 40px;height: 40px;background:#3ab5b5;display: block;border-radius: 50%; animation: outside 1.5s;animation-iteration-count: infinite;position:absolute;left: 50%;top: 50%;margin-top:-19px;margin-left:-19px;}
+	@keyframes middle{
+		0{transform:scale(1);}
+		50%{transform:scale(40);}
+		100%{transform:scale(1);}
+	}
+	@keyframes outside{
+		0{}
+		50%{transform:scale(0.05);}
+		100%{transform:scale(1);}
+	}
+	</style>
+</head>
+<body>
+<span class="middle"></span>
+<span class="outside"></span>
+</body>
+</html>
